@@ -15,6 +15,9 @@ nav{
   z-index: 10001;
 }
 
+.text-center {
+  text-align: center !important;
+}
 
 .navbar {
   padding: 10px 13%;
@@ -187,6 +190,39 @@ input, label{
   gap: 2rem 1rem;
 }
 
+.testimonial {
+  border: 2px solid #F4CE14;
+  background-color: #495E57;
+  border-radius: 25px;
+  padding: 16px;
+  margin: 16px auto;
+  text-align: center;
+  color: #FFF;
+}
+
+.testimonial::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.testimonial img {
+  border: 8px solid #FFF;
+  display: block;
+  width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -75px;
+  border-radius: 49%;
+  height: 100px;
+}
+
+.testimonial .title {
+  font-size: 20px;
+  margin-right: 15px;
+  color: #F4CE14;
+}
+
 .menu-items{
   /* height: 400px; */
   width: 350px;
@@ -218,6 +254,7 @@ input, label{
 }
 
 footer section{
+  width: 100%;
   padding: 10px 13%;
   display: flex;
   justify-content: space-between;
@@ -244,6 +281,11 @@ footer ul{
 
 footer ul li{
   padding: 8px 0;
+}
+
+testimonials section {
+  margin: 110px auto;
+  padding: 10px 13%;
 }
 
 
@@ -310,4 +352,46 @@ footer ul li{
 
 .hidden{
   display: none;
+}
+
+/* Style the container with a rounded border, grey background and some padding and margin */
+.container {
+  border: 2px solid #F4CE14;
+  background-color: #495E57;
+  border-radius: 5px;
+  padding: 16px;
+  margin: 16px auto;
+}
+
+/* Clear floats after containers */
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Float images inside the container to the left. Add a right margin, and style the image as a circle */
+.container img {
+  float: left;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+/* Increase the font-size of a span element */
+.container span {
+  font-size: 20px;
+  margin-right: 15px;
+}
+
+/* Add media queries for responsiveness. This will center both the text and the image inside the container */
+@media (max-width: 500px) {
+  .container {
+    text-align: center;
+  }
+
+  .container img {
+    margin: auto;
+    float: none;
+    display: block;
+  }
 }
